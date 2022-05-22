@@ -2,6 +2,16 @@
 .categories {
     ul {
         display: flex;
+        @media (max-width: 1300px) {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 950px) {
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            gap: 10px;
+        }
         li {
             background-color: #f9f9f9;
             padding: 13px 30px;
@@ -20,6 +30,16 @@
             &.active {
                 background-color: #282828;
                 color: #fff;
+            }
+            @media (max-width: 950px) {
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                width: 48%;
+                margin: 0;
+            }
+            @media (max-width: 425px) {
+                width: 100%;
             }
         }
     }

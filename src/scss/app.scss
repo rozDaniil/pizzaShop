@@ -5,10 +5,13 @@
 body {
     background-color: $background;
     padding: 50px 0;
+    @media (max-width: 425px) {
+        padding: 15px 0;
+    }
 }
 
 .wrapper {
-    width: calc(100vw - 100px);
+    width: calc(100vw - 15%);
     height: 100%;
     background-color: #fff;
     margin: 0 auto;
@@ -18,18 +21,28 @@ body {
 
 .content {
     padding: 40px 0;
+    @media (max-width: 425px) {
+        padding: 20px 0;
+    }
     &__title {
         margin: 35px 0;
     }
     &__items {
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: space-around;
+        gap: 20px;
     }
     &__top {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: 1300px) {
+            display: block;
+        }
+        @media (max-width: 950px) {
+            display: block;
+        }
     }
 }
 
@@ -39,6 +52,9 @@ body {
     &--cart {
         max-width: 820px;
         margin: 90px auto;
+        @media (max-width: 425px) {
+            margin: 40px auto;
+        }
         .content__title {
             margin: 0;
         }
@@ -50,6 +66,14 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: 425px) {
+            flex-direction: column;
+        }
+        .content__title {
+            @media (max-width: 425px) {
+                margin-bottom: 10px;
+            }
+        }
     }
     .content__title {
         display: flex;
@@ -100,14 +124,24 @@ body {
         border-top: 1px solid $gray-line;
         padding-top: 30px;
         margin-top: 30px;
+        @media (max-width: 425px) {
+            flex-wrap: wrap;
+        }
         &-img {
             display: flex;
             align-items: center;
             margin-right: 15px;
             width: 10%;
+            @media (max-width: 425px) {
+                width: 20%;
+            }
             img {
                 width: 80px;
                 height: 80px;
+                @media (max-width: 425px) {
+                    width: 60px;
+                    height: 60px;
+                }
             }
         }
         &-info {
@@ -115,6 +149,10 @@ body {
             flex-direction: column;
             justify-content: center;
             width: 40%;
+            @media (max-width: 425px) {
+                text-align: center;
+                width: 70%;
+            }
             h3 {
                 font-weight: bold;
                 font-size: 22px;
@@ -131,6 +169,10 @@ body {
             align-items: center;
             justify-content: space-between;
             width: 13%;
+            @media (max-width: 425px) {
+                margin-left: 5px;
+                width: 40%;
+            }
             &-minus {
                 svg {
                     path:first-of-type {
@@ -147,6 +189,9 @@ body {
             align-items: center;
             justify-content: center;
             width: 33%;
+            @media (max-width: 425px) {
+                width: 34%;
+            }
             b {
                 font-weight: bold;
                 font-size: 22px;
@@ -158,6 +203,9 @@ body {
             align-items: center;
             justify-content: flex-end;
             width: 4%;
+            @media (max-width: 425px) {
+                width: 20%;
+            }
             .button {
                 border-color: darken($color: $gray-line, $amount: 10);
             }
@@ -188,6 +236,11 @@ body {
             justify-content: space-between;
             span {
                 font-size: 22px;
+                @media (max-width: 425px) {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                }
                 &:last-of-type {
                     b {
                         color: $orange;
@@ -199,6 +252,11 @@ body {
             display: flex;
             justify-content: space-between;
             margin-top: 40px;
+            @media (max-width: 425px) {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
             .go-back-btn {
                 display: flex;
                 align-items: center;
@@ -237,9 +295,24 @@ body {
         margin: 0 auto;
         width: 560px;
         text-align: center;
+        @media (max-width: 425px) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
         h2 {
             font-size: 32px;
             margin-bottom: 10px;
+            @media (max-width: 425px) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            span {
+                @media (max-width: 320px) {
+                    display: none;
+                }
+            }
         }
         p {
             font-size: 18px;
@@ -255,6 +328,9 @@ body {
             display: block;
             width: 300px;
             margin: 45px auto 60px;
+            @media (max-width: 425px) {
+                width: 100%;
+            }
         }
         .button--black {
             padding: 12px 0 14px;
